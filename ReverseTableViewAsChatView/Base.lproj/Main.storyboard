@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xjz-jj-ueL">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--revereData-->
+        <scene sceneID="9bD-O9-mKS">
+            <objects>
+                <viewController id="Xjz-jj-ueL" customClass="ReverseTableViewController" customModule="reverseDataVSReverseTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dVg-AK-TTA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IiZ-un-PNg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="788"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reverseDataCell" id="9zS-et-0OX">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9zS-et-0OX" id="svB-XV-hns">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xjz-jj-ueL" id="t94-ea-1xn"/>
+                                    <outlet property="delegate" destination="Xjz-jj-ueL" id="aUJ-Go-J74"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZR-ls-LIy">
+                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write Something" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9X-a2-VWX">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJJ-fp-XKx">
+                                        <rect key="frame" x="378" y="0.0" width="36" height="30"/>
+                                        <color key="backgroundColor" red="0.26001858709999998" green="0.41535782809999999" blue="0.86278873680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendTapped:" destination="Xjz-jj-ueL" eventType="touchUpInside" id="J8L-V7-HVM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IiZ-un-PNg" firstAttribute="trailing" secondItem="CuA-wI-Qft" secondAttribute="trailing" id="AYc-UI-bGI"/>
+                            <constraint firstItem="IiZ-un-PNg" firstAttribute="leading" secondItem="CuA-wI-Qft" secondAttribute="leading" id="amQ-bL-5ZR"/>
+                            <constraint firstItem="CuA-wI-Qft" firstAttribute="bottom" secondItem="uZR-ls-LIy" secondAttribute="bottom" id="qrj-Sa-6Yx"/>
+                            <constraint firstItem="CuA-wI-Qft" firstAttribute="trailing" secondItem="uZR-ls-LIy" secondAttribute="trailing" id="sFx-nV-x5r"/>
+                            <constraint firstItem="uZR-ls-LIy" firstAttribute="leading" secondItem="dVg-AK-TTA" secondAttribute="leading" id="ulC-oT-k9I"/>
+                            <constraint firstItem="uZR-ls-LIy" firstAttribute="top" secondItem="IiZ-un-PNg" secondAttribute="bottom" id="ymJ-80-VLb"/>
+                            <constraint firstItem="IiZ-un-PNg" firstAttribute="top" secondItem="CuA-wI-Qft" secondAttribute="top" id="zCe-cp-0v0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CuA-wI-Qft"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="revereData" id="rfo-Vg-8ej"/>
+                    <connections>
+                        <outlet property="messageTextfield" destination="R9X-a2-VWX" id="EcM-Oa-GCq"/>
+                        <outlet property="tableView" destination="IiZ-un-PNg" id="bd9-so-vFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZb-SN-9oB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228.985507246377" y="150"/>
+        </scene>
+    </scenes>
+</document>
